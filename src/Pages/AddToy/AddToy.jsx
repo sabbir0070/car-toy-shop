@@ -10,7 +10,7 @@ const AddToy = () => {
     const form = event.target;
     console.log()
     const photo = form.photo.value;
-    const name = form.name.value;
+    const toyName = form.name.value;
     const sellerName = user?.displayName;
     const sellerEmail = user?.email;
     const subCategory = form?.subCategory?.value;
@@ -21,7 +21,7 @@ const AddToy = () => {
     const details = form.details.value;
 
     const toyInformation = {
-      photo, name, sellerName, sellerEmail, subCategory, price, rating, quantity, date, details
+      photo, toyName, sellerName, sellerEmail, subCategory, price, rating, quantity, date, details
     }
     console.log(toyInformation);
 fetch(`http://localhost:5000/addToy`,{

@@ -1,10 +1,19 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo/logo.jpg'
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Navbar = () => {
-const {user} = useContext(AuthContext);
+const {user, logOut} = useContext(AuthContext);
+const handleLogOut = () =>{
+logOut()
+.then(()=>{
+console.log('log out');
+})
+.catch(error=>{
+console.log(error.message)
+})
+}
 
 const navItems = <>
     <ul className="menu menu-horizontal px-1 mb-4 text-lg font-bold text-gray-700">
@@ -19,7 +28,7 @@ const navItems = <>
 <div aria-label={user} title={user?.displayName}>
 <div className='w-10 h-10 rounded-full mr-3'> <img src={user?.photoURL} className='w-10 h-10 rounded-full' alt="img nai" /> </div>
 </div>
-<li><button className="bg-yellow-600 px-6 py-2 text-white" to="/logout">logOut</button></li>
+<li><button onClick={handleLogOut} className="bg-yellow-600 px-6 py-2 text-white" to="/logout">logOut</button></li>
 </>:
 <><li><Link to="/login">Login</Link></li> </>
 }
