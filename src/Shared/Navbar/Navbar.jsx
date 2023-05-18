@@ -20,7 +20,7 @@ const navItems = <>
       <li><Link to="/">Home</Link></li>
       <li><Link to="/allToy">All Toys</Link></li>
      
- <li><Link to="">My Toys</Link></li>
+ <li><Link to="myToy">My Toys</Link></li>
  <li><Link to="/addToy">Add A Toy</Link></li>
  <li><Link to="">Blogs</Link></li >
 {user ? <>
@@ -40,7 +40,7 @@ const navItemSmallDevice = <>
       <li><Link to="/">Home</Link></li>
       <li><Link to="/allToy">All Toys</Link></li>
      
- <li><Link to="">My Toys</Link></li>
+ <li><Link to="/myToy">My Toys</Link></li>
  <li><Link to="/addToy">Add A Toy</Link></li>
  <li><Link to="">Blogs</Link></li>
 {user ? <>
