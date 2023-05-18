@@ -9,7 +9,6 @@ const SignUp = () => {
   const { createUser, updateProfileAndPhoto } = useContext(AuthContext);
   const [success, setSuccess] = useState();
   const [error, setError] = useState();
-console.log(updateProfileAndPhoto);
   const handleSignIn = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -21,28 +20,28 @@ console.log(updateProfileAndPhoto);
     createUser(email, password)
       .then(result => {
         const loggedUser = result.user;
-        updatePhotoAndName(loggedUser,name, photo)
+        updatePhotoAndName(loggedUser, name, photo)
         setError('')
         setSuccess('Create New Account Successful')
         console.log(loggedUser)
 
       })
       .catch(error => {
-        console.log(error.message)
+
         setSuccess('')
         setError(error.message)
       })
   }
-    const updatePhotoAndName = (user, name, photo) => {
-      updateProfileAndPhoto(user, name, photo)
-        .then(() => {
-          console.log('profile photo and name updated')
-        })
-        .catch(error => {
-          setSuccess('')
-          setError(error.message)
-        })
-    }
+  const updatePhotoAndName = (user, name, photo) => {
+    updateProfileAndPhoto(user, name, photo)
+      .then(() => {
+        console.log('profile photo and name updated')
+      })
+      .catch(error => {
+        setSuccess('')
+        setError(error.message)
+      })
+  }
 
 
 
