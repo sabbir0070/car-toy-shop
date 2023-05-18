@@ -9,7 +9,7 @@ const {user} = useContext(AuthContext);
 const navItems = <>
     <ul className="menu menu-horizontal px-1 mb-4 text-lg font-bold text-gray-700">
       <li><Link to="/">Home</Link></li>
-      <li><Link to="/about">All Toys</Link></li>
+      <li><Link to="/allToy">All Toys</Link></li>
      
  <li><Link to="">My Toys</Link></li>
  <li><Link to="/addToy">Add A Toy</Link></li>
@@ -29,7 +29,7 @@ const navItemSmallDevice = <>
    <div className='flex justify-between'>
  <ul className="menu menu-horizontal flex flex-col px-1 mb-4 text-lg font-bold text-gray-700">
       <li><Link to="/">Home</Link></li>
-      <li><Link to="/about">All Toys</Link></li>
+      <li><Link to="/allToy">All Toys</Link></li>
      
  <li><Link to="">My Toys</Link></li>
  <li><Link to="">Add A Toy</Link></li>
