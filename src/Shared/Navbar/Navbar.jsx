@@ -65,7 +65,7 @@ const navItemSmallDevice = <>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       {/* <li><a>Home</a></li>
-      <li>   About </li>
+      <li>   About,home </li>
       <li><a>Item 3</a></li> */}
 {navItems}
     </ul>
