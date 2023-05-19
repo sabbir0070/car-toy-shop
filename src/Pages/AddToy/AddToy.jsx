@@ -84,9 +84,9 @@ Swal.fire({
                   <span className="label-text text-lg text-lime-600 font-bold">Sub Category</span>
                 </label>
                 <select type="text" name='subCategory' className="input input-bordered" required>
-                  <option value="Bus">Bus</option>
-                  <option value="Truck">Truck</option>
-                  <option value="private Car">Private Car</option>
+                  <option value="MiniBus">MiniBus</option>
+                  <option value="MiniTruck">MiniTruck</option>
+                  <option value="MiniPoliceCar">MiniPoliceCar</option>
                 </select>
               </div>
               <div className="form-control">

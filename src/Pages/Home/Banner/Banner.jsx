@@ -12,11 +12,11 @@ const Banner = () => {
         <img src={img1} className="w-full rounded-xl" />
         <div className="absolute rounded-xl h-full flex items-center left-0 top-0 bg-gradient-to-r from-black to-white-500">
           <div className='text-white pl-12  i space-y-7 w-1/2'>
-            <h2 className='text-6xl  font-bold'>Affordable Price For Car Servicing </h2>
+            <h2 className='text-6xl  font-bold'>Here Your Best Quality Car Toys </h2>
             <p className='text-2xl'>There are many variations of passages of available ,but the majority have suffered alteration in some form </p>
             <div className=''>
-              <button className="btn btn-outline btn-primary mr-5">Discover More</button>
-              <button className="btn btn-outline btn-error">Latest Project</button>
+              <button className="btn btn-outline btn-primary mr-5">Discover Toys</button>
+              <button className="btn btn-outline btn-error">Latest Car</button>
             </div>
           </div>
         </div>
