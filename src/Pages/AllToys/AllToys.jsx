@@ -46,7 +46,7 @@ setToys(data)
     <tbody>
      
 {
- toys.map(toy=> <AllToysTabler toy={toy} key={toy._id}></AllToysTabler> )
+ toys.map((toy,index)=> <AllToysTabler toy={toy} index={index} key={toy._id}></AllToysTabler> )
 }  
 
     </tbody> 

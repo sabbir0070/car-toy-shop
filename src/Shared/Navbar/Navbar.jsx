@@ -20,15 +20,19 @@ const navItems = <>
       <li><Link to="/">Home</Link></li>
       <li><Link to="/allToy">All Toys</Link></li>
      
- <li><Link to="myToy">My Toys</Link></li>
+ {user &&
+<>
+<li><Link to="myToy">My Toys</Link></li>
  <li><Link to="/addToy">Add A Toy</Link></li>
+</>
+}
  <li><Link to="">Blogs</Link></li >
 {user ? <>
 
 <div aria-label={user} title={user?.displayName}>
 <div className='w-10 h-10 rounded-full mr-3 mt-2'> <img src={user?.photoURL} className='w-10 h-10 rounded-full' alt="img nai" /> </div>
 </div>
-<li><button onClick={handleLogOut} className="bg-yellow-600 px-6 py-2 text-white" to="/logout">logOut</button></li>
+<li><button onClick={handleLogOut} className="bg-lime-600 px-6 py-2 text-white" to="/logout">logOut</button></li>
 </>:
 <><li><Link to="/login">Login</Link></li> </>
 }
@@ -39,16 +43,19 @@ const navItemSmallDevice = <>
  <ul className="menu menu-horizontal flex flex-col px-1 mb-4 text-lg font-bold text-gray-700">
       <li><Link to="/">Home</Link></li>
       <li><Link to="/allToy">All Toys</Link></li>
-     
- <li><Link to="/myToy">My Toys</Link></li>
+      {user &&
+<>
+<li><Link to="myToy">My Toys</Link></li>
  <li><Link to="/addToy">Add A Toy</Link></li>
+</>
+}
  <li><Link to="">Blogs</Link></li>
 {user ? <>
 
 <div aria-label={user} title={user?.displayName}>
 <div className='w-10 h-10 rounded-full ml-3 mb-3 items-center justify-center'> <img src={user?.photoURL} className='w-10 h-10 rounded-full' alt="img nai" /> </div>
 </div>
-<li><button className="bg-yellow-600 px-6 py-2 text-white" to="/logout">logOut</button></li>
+<li><button onClick={handleLogOut} className="bg-lime-600 px-6 py-2 text-white" to="/logout">logOut</button></li>
 </>:
 <><li><Link to="/login">Login</Link></li> </>
 }

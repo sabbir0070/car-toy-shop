@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { json } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 const AddToy = () => {
@@ -34,6 +35,15 @@ body:JSON.stringify(toyInformation)
 .then(res=>res.json())
 .then(data=>{
 console.log(data)
+if(data?.insertedId > 0){ 
+Swal.fire({
+  position: 'top-center',
+  icon: 'success',
+  title: 'Your New Toy added  has been successful',
+  showConfirmButton: true,
+  timer: 1500,
+})
+}
 })
 
   }
