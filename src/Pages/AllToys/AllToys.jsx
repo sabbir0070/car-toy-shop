@@ -5,12 +5,10 @@ const AllToys = () => {
 const [toys, setToys] = useState([]);
 const [searchText, setSearchText] = useState('');
 
-console.log(toys)
 useEffect(()=>{
 fetch(`http://localhost:5000/allToy`)
 .then(res=>res.json())
 .then(data=>{
-console.log(data)
 setToys(data)
 })
 },[])

@@ -1,23 +1,23 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
-import { FaBeer, FaRegEdit, FaTrash } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+
 import Swal from 'sweetalert2';
-import UpdateToyModal from '../UpdateToyModal/UpdateToyModal';
+import MyToyTable from '../MyToyTable/MyToyTable';
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
   const [control, setControl] = useState(false)
 
+
   useEffect(() => {
     fetch(`http://localhost:5000/myToy/${user?.email}`)
       .then(res => res.json())
       .then(data => {
         setToys(data)
-        console.log(data)
+        // console.log(data)
       })
-  }, [user])
+  }, [user,control])
 
   const handleDelete = (id) => {
     console.log('confirm deleted', id)
@@ -51,12 +51,10 @@ const MyToys = () => {
         }
       })
   }
-const handleUpdate = (toys) =>{
-console.log(toys)
-}
+ 
   return (
     <div>
-      <h2>My All Toys</h2>
+      <h2 className='text-center text-3xl font-semibold text-lime-600 mt-5'>My All Toys</h2>
       <div className="overflow-x-auto my-7">
         <table className="table table-zebra w-full">
           {/* head */}
@@ -75,41 +73,9 @@ console.log(toys)
           </thead>
           <tbody>
 
-            {
-              toys.map((toy, index) => (
-                <tr className='' key={toy._id}>
-                  <th>{index + 1}</th>
-                  <td>
-                    <div className="avatar">
-                      <div className="mask  w-24 h-16">
-                        <img src={toy?.photo} className='w-full h-full rounded-lg' alt="Avatar Tailwind CSS Component" />
-                      </div>
-                    </div>
-                  </td>
-                  <td> {toy?.toyName} </td>
-                  <td> {toy?.subCategory} </td>
-                  <td> {toy?.price} </td>
-                  <td> {toy?.date} </td>
-                  <td> {toy?.quantity} </td>
-                  <td >
-  {/* The button to open modal */}
-                    <label  htmlFor="my-modal-5"><FaRegEdit className='text-green-600 w-8 h-8'></FaRegEdit></label>
-                    {/* Put this part before </body> tag */}
-                    <input type="checkbox" id="my-modal-5" className="modal-toggle" />
-                    <div className="modal">
-                      <div className="modal-box w-3/4 h-3/4 max-w-5xl">
-
-                        <div>modal information</div>
-                         <UpdateToyModal toy={toy} handleUpdate={handleUpdate}></UpdateToyModal>
-                        <div className="modal-action">
-                          <label htmlFor="my-modal-5" className="btn">Save</label>
-                        </div>
-                      </div>
-                    </div> </td>
-                  <td onClick={() => handleDelete(toy?._id)}> <FaTrash className='text-red-600 w-8 h-8'></FaTrash> </td>
-                </tr>
-              ))
-            }
+           {
+toys.map((toy,index)=><MyToyTable handleDelete={handleDelete} toy={toy} key={toy._id} index={index} setControl={setControl} control={control}></MyToyTable> )
+}
 
           </tbody>
         </table>

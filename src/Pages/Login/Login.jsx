@@ -10,15 +10,16 @@ const Login = () => {
   const { signInUser } = useContext(AuthContext);
   const [error, setError] = useState();
   const [success, setSuccess] = useState();
-const navigate = useNavigate();
-const location = useLocation();
-const from = location?.state?.from?.pathname || '/';
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state?.from?.pathname || '/';
 
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
+    form.reset();
     if (password.length < 6) {
       setError('Please at least 6 digit password')
     }
@@ -27,12 +28,13 @@ const from = location?.state?.from?.pathname || '/';
         const loggedUser = result.user;
         setError('')
         setSuccess('Login successful')
-   navigate(from, {replace: true});
+        navigate(from, { replace: true });
       })
       .catch(error => {
         console.log(error.message)
         setError(error.message)
       })
+
   }
 
   return (

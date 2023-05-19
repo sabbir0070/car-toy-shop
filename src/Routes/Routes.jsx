@@ -23,37 +23,38 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home></Home>
       },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: 'signUp',
+        element: <SignUp></SignUp>
+      },
+      {
+        path: '/addToy',
+        element: <AddToy></AddToy>
+      },
+      {
+        path: '/allToy',
+        element: <AllToys></AllToys>
+      },
+      {
+        path: '/myToy',
+        element: <MyToys></MyToys>
+      },
+      {
+        path: '/updateToyModal',
+        element: <UpdateToyModal></UpdateToyModal>
+      },
 {
-path:'/login',
-element:<Login></Login>
-},
-{
-path:'signUp',
-element:<SignUp></SignUp>
-},
-{
-path:'/addToy',
-element:<AddToy></AddToy>
-},
-{
-path:'/allToy',
-element:<AllToys></AllToys>
-},
-{
-path:'/myToy',
-element:<MyToys></MyToys>
-},
-{
-path:'/updateToyModal',
-element:<UpdateToyModal></UpdateToyModal>
-},
-{
-path:'/singleToy/:id',
-element:<PrivateRoute><SingleToyDetails></SingleToyDetails></PrivateRoute>,
-loader:({params})=>fetch(`http://localhost:5000/singleToy/${params.id}`)
-}
+        path: '/singleToy/:id',
+        element: <PrivateRoute><SingleToyDetails></SingleToyDetails></PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/singleToy/${params.id}`)
+      }
     ]
   },
+
 ]);
 
 export default router;
