@@ -32,7 +32,7 @@ const navItems = <>
 <div aria-label={user} title={user?.displayName}>
 <div className='w-10 h-10 rounded-full mr-3 mt-2'> <img src={user?.photoURL} className='w-10 h-10 rounded-full' alt="img nai" /> </div>
 </div>
-<li><button onClick={handleLogOut} className="bg-lime-600 px-6 py-2 text-white" to="/logout">logOut</button></li>
+<li><button onClick={handleLogOut} className="bg-lime-600 px-6 py-1 text-white" to="/logout">logOut</button></li>
 </>:
 <><li><Link to="/login">Login</Link></li> </>
 }
@@ -55,7 +55,7 @@ const navItemSmallDevice = <>
 <div aria-label={user} title={user?.displayName}>
 <div className='w-10 h-10 rounded-full ml-3 mb-3 items-center justify-center'> <img src={user?.photoURL} className='w-10 h-10 rounded-full' alt="img nai" /> </div>
 </div>
-<li><button onClick={handleLogOut} className="bg-lime-600 px-6 py-2 text-white" to="/logout">logOut</button></li>
+<li><button onClick={handleLogOut} className="bg-lime-600 px-6 py-1 text-white" to="/logout">logOut</button></li>
 </>:
 <><li><Link to="/login">Login</Link></li> </>
 }

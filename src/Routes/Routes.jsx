@@ -13,16 +13,23 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import MyToys from "../Pages/MyToys/MyToys";
 import UpdateToyModal from "../Pages/UpdateToyModal/UpdateToyModal";
 import ToySingleSubDetails from "../Pages/Home/Home/ToySingleSubDetails/ToySingleSubDetails";
+import Blog from "../Pages/Blog/Blog";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path: '/blog',
+        element: <Blog></Blog>
       },
       {
         path: '/login',
