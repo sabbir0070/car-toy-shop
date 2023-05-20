@@ -8,8 +8,8 @@ const toy = useLoaderData();
  const { _id, toyName, sellerName,sellerEmail, rating, quantity, photo, price, subCategory, date, details } = toy;
 
   return (
-    <div className='bg-base-3000'>
-<div className="card  h-full lg:card-side md:card-side my-7  bg-base-100 mx-auto shadow-xl">
+    <div className='bg-base-300 rounded-lg'>
+<div className="card  h-full lg:card-side md:card-side my-7 rounded-xl bg-base-100 mx-auto shadow-xl">
   <div className='lg:px- md:m-10 w-full md:w-1/2 lg:w-1/2  h-full px-2 '>
     <img src={photo} alt="Shoes" className=" w-full rounded-xl" />
 </div>
