@@ -26,7 +26,7 @@ const navItems = <>
  <li><Link to="/addToy">Add A Toy</Link></li>
 </>
 }
- <li><Link to="">Blogs</Link></li >
+ <li><Link to="/blog">Blogs</Link></li >
 {user ? <>
 
 <div aria-label={user} title={user?.displayName}>
@@ -49,7 +49,7 @@ const navItemSmallDevice = <>
  <li><Link to="/addToy">Add A Toy</Link></li>
 </>
 }
- <li><Link to="">Blogs</Link></li>
+ <li><Link to="blog">Blogs</Link></li>
 {user ? <>
 
 <div aria-label={user} title={user?.displayName}>

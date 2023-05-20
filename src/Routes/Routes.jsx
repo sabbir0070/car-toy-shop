@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/addToy',
-        element: <AddToy></AddToy>
+        element: <PrivateRoute><AddToy></AddToy></PrivateRoute>
       },
       {
         path: '/allToy',
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/myToy',
-        element: <MyToys></MyToys>
+        element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
       },
       {
         path: '/updateToyModal',
@@ -51,12 +51,12 @@ const router = createBrowserRouter([
       {
         path: '/singleToy/:id',
         element: <PrivateRoute><SingleToyDetails></SingleToyDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/singleToy/${params.id}`)
+        loader: ({ params }) => fetch(`https://toys-car-project-server.vercel.app/singleToy/${params.id}`)
       },
       {
         path: '/singleSubDetails/:id',
         element: <ToySingleSubDetails></ToySingleSubDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/singleSubDetails/${params.id}`)
+        loader: ({ params }) => fetch(`https://toys-car-project-server.vercel.app/singleSubDetails/${params.id}`)
       }
     ]
   },

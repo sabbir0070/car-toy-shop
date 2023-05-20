@@ -25,7 +25,7 @@ const AddToy = () => {
       photo, toyName, sellerName, sellerEmail, subCategory, price, rating, quantity, date, details
     }
     console.log(toyInformation);
-fetch(`http://localhost:5000/addToy`,{
+fetch(`https://toys-car-project-server.vercel.app/addToy`,{
 method:"POST",
 headers:{
 "content-type":"application/json"

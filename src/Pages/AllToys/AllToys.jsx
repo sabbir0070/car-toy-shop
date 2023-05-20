@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import AllToysTabler from '../AllToysTabler/AllToysTabler';
 
 const AllToys = () => {
@@ -6,7 +6,7 @@ const [toys, setToys] = useState([]);
 const [searchText, setSearchText] = useState('');
 
 useEffect(()=>{
-fetch(`http://localhost:5000/allToy`)
+fetch(`https://toys-car-project-server.vercel.app/allToy`)
 .then(res=>res.json())
 .then(data=>{
 setToys(data)
@@ -14,11 +14,15 @@ setToys(data)
 },[])
 
 const handleSearch =() =>{
-fetch(`http://localhost:5000/allToySearchName/${searchText}`)
+fetch(`https://toys-car-project-server.vercel.app/allToySearchName/${searchText}`)
 .then(res=>res.json())
 .then(data=>{
 setToys(data)
 })
+
+
+
+
 }
   return (
     <div>

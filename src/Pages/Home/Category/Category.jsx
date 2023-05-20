@@ -6,7 +6,7 @@ const [toys, setToys] = useState([]);
 const [activeTab, setActiveTab] = useState("MiniBus");
 console.log(toys)
 useEffect(()=>{
-fetch(`http://localhost:5000/allToy/${activeTab}`)
+fetch(`https://toys-car-project-server.vercel.app/allToy/${activeTab}`)
 .then(res=>res.json())
 .then(data=>{
 setToys(data)
