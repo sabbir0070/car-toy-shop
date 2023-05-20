@@ -12,6 +12,7 @@ import SingleToyDetails from "../Pages/SingleToyDetails/SingleToyDetails";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import MyToys from "../Pages/MyToys/MyToys";
 import UpdateToyModal from "../Pages/UpdateToyModal/UpdateToyModal";
+import ToySingleSubDetails from "../Pages/Home/Home/ToySingleSubDetails/ToySingleSubDetails";
 
 
 const router = createBrowserRouter([
@@ -47,10 +48,15 @@ const router = createBrowserRouter([
         path: '/updateToyModal',
         element: <UpdateToyModal></UpdateToyModal>
       },
-{
+      {
         path: '/singleToy/:id',
         element: <PrivateRoute><SingleToyDetails></SingleToyDetails></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/singleToy/${params.id}`)
+      },
+      {
+        path: '/singleSubDetails/:id',
+        element: <ToySingleSubDetails></ToySingleSubDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/singleSubDetails/${params.id}`)
       }
     ]
   },
