@@ -9,13 +9,12 @@ const AddToy = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
-    console.log()
     const photo = form.photo.value;
     const toyName = form.name.value;
     const sellerName = user?.displayName;
     const sellerEmail = user?.email;
     const subCategory = form?.subCategory?.value;
-    const price = form.price.value;
+    const price =form.price.value;
     const rating = form.rating.value;
     const quantity = form.quantity.value;
     const date = form.date.value;
@@ -35,7 +34,7 @@ body:JSON.stringify(toyInformation)
 .then(res=>res.json())
 .then(data=>{
 console.log(data)
-if(data?.insertedId > 0){ 
+if(data?.insertedId){ 
 Swal.fire({
   position: 'top-center',
   icon: 'success',

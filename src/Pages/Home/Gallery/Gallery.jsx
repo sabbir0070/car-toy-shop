@@ -16,7 +16,14 @@ const Gallery = () => {
     <div className=''>
 <h2 className='text-center text-lime-600 text-3xl font-bold pb-6'>Available toy car sell product images</h2>
       <div className='grid  grid-cols-3 md:grid-cols-6 pb-4  lg:grid-cols-6 gap-4 mx-auto bg-base-200 hover:bg-base-300 '>
-<div className='w-40 h-32 p-2 mt-3 mx-auto hover:bg-opacity-90 '>
+<div className='w-40 h-32 p-2 mt-3 mx-auto hover:bg-opacity-90
+data-aos="zoom-in-up" 
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-anchor-placement="top-center"
+ '>
 <img src={img1} className={`w-full h-full rounded-lg`} alt="No image" />
 </div>
 <div className='w-40 h-32 p-2 mt-3 mx-auto hover:bg-opacity-90'>

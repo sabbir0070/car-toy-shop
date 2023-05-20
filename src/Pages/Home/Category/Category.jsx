@@ -22,21 +22,21 @@ setActiveTab(tabName);
 <div className='flex justify-center gap-8'>
 <div onClick={()=>handleTabClick('MiniTruck')} className={`
 px-6 py-3 w-24 bg-white text-black font-bold rounded-lg ${
-activeTab =="MiniTruck" ? "bg-orange-600 text-white " :''
+activeTab =="MiniTruck" ? "bg-yellow-500 text-white"  :''
 }
 `}>
 Truck
 </div>
 <div onClick={()=>handleTabClick('MiniBus')} className={`
 px-6 py-3 w-24 bg-white text-black font-bold rounded-lg ${
-activeTab =="MiniBus" ? "bg-orange-600 text-white " :''
+activeTab =="MiniBus" ? "bg-yellow-500 text-white" :''
 }
 `}>
 Buses
 </div>
 <div onClick={()=>handleTabClick("MiniPoliceCar")} className={`
 px-6 py-3 w-24 bg-white text-black font-bold rounded-lg ${
-activeTab =="MiniPoliceCar" ? "bg-orange-600 text-white " :''
+activeTab =="MiniPoliceCar" ? "bg-yellow-500 text-white" :''
 }
 `}>
 Police
