@@ -3,6 +3,7 @@ import img1 from '../../assets/images/login/login.svg'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import UseTitle from '../../Hooks/UseTitle';
 
 
 
@@ -13,7 +14,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location?.state?.from?.pathname || '/';
-
+  UseTitle('Login')
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;

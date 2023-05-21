@@ -3,12 +3,14 @@ import img1 from '../../assets/images/login/login.svg'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import UseTitle from '../../Hooks/UseTitle';
 
 
 const SignUp = () => {
   const { createUser, updateProfileAndPhoto } = useContext(AuthContext);
   const [success, setSuccess] = useState();
   const [error, setError] = useState();
+  UseTitle('Register')
   const handleSignIn = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -16,7 +18,7 @@ const SignUp = () => {
     const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-form.reset();
+    form.reset();
     createUser(email, password)
       .then(result => {
         const loggedUser = result.user;

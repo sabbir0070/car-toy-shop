@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { json } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import UseTitle from '../../Hooks/UseTitle';
 
 
 const AddToy = () => {
   const { user } = useContext(AuthContext);
+UseTitle('AddToy')
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;

@@ -2,11 +2,12 @@ import React from 'react';
 import { FaRegStar, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { Link, useLoaderData } from 'react-router-dom';
+import UseTitle from '../../Hooks/UseTitle';
 
 const SingleToyDetails = () => {
 
   const { photo, toyName, sellerName, sellerEmail, price, rating, quantity, details } = useLoaderData();
-
+UseTitle('SingleToy')
   return (
     <div className='my-7'>
       <h2></h2>

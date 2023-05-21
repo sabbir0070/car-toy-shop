@@ -1,32 +1,32 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
-
 import Swal from 'sweetalert2';
 import MyToyTable from '../MyToyTable/MyToyTable';
 import Select from 'react-select';
+import UseTitle from '../../Hooks/UseTitle';
 
-const options =[
-{value:"Price-Ascending", label:"Ascending"},
-{value:"Price-Descending", label:"Descending"}
+const options = [
+  { value: "Price-Ascending", label: "Ascending" },
+  { value: "Price-Descending", label: "Descending" }
 ]
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
   const [control, setControl] = useState(false)
-const [selectedOption, setSelectedOption] = useState(options[0])
-//  `https://b7a11-toy-marketplace-server-side-mahfuz091.vercel.app/user?sellerEmail=${user?.email}&value=${value}&type=${type}`
+  const [selectedOption, setSelectedOption] = useState(options[0])
+ UseTitle('My Toys')
   useEffect(() => {
-const [value,type] = selectedOption.value
-.split("-")
-.map((item)=>item.toLowerCase());
+    const [value, type] = selectedOption.value
+      .split("-")
+      .map((item) => item.toLowerCase());
     fetch(`https://toys-car-project-server.vercel.app/myToy?email=${user?.email}&value=${value}&type=${type}`)
       .then(res => res.json())
       .then(data => {
         setToys(data)
         // console.log(data)
       })
-  }, [user,control,selectedOption])
+  }, [user, control, selectedOption])
 
   const handleDelete = (id) => {
     console.log('confirm deleted', id)
@@ -60,19 +60,20 @@ const [value,type] = selectedOption.value
         }
       })
   }
- 
+
   return (
     <div>
-      <h2 className='text-center text-3xl font-semibold text-lime-600 mt-5'>My All Toys</h2>     
-<div className='text-lg mt-5 font-semibold   mx-auto h-4 w-60'>
-<Select 
-defaultValue ={options[0]}
-onChange={setSelectedOption}
-options = {options}
- >
-</Select>
-</div> 
-<div className="overflow-x-auto my-7 mt-14">
+      <h2 className='text-center text-3xl font-semibold text-lime-600 mt-5'>My All Toys</h2>
+      <div className='text-lg mt-5 font-semibold   mx-auto h-4 w-60'>
+        <Select
+          defaultValue={options[0]}
+          onChange={setSelectedOption}
+          options={options}
+        >
+        </Select>
+
+      </div>
+      <div className="overflow-x-auto my-7 mt-14">
         <table className="table table-zebra w-full">
           {/* head */}
           <thead>
@@ -89,9 +90,9 @@ options = {options}
             </tr>
           </thead>
           <tbody>
-           {
-toys.map((toy,index)=><MyToyTable handleDelete={handleDelete} toy={toy} key={toy._id} index={index} setControl={setControl} control={control}></MyToyTable> )
-}
+            {
+              toys.map((toy, index) => <MyToyTable handleDelete={handleDelete} toy={toy} key={toy._id} index={index} setControl={setControl} control={control}></MyToyTable>)
+            }
 
           </tbody>
         </table>
