@@ -39,7 +39,7 @@ const ToySubCard = ({ toy }) => {
               fullSymbol={<FaStar></FaStar>}
             />
           </p>
-          <Link to={`/singleSubDetails/${_id}`} toy={toy}> <button className="px-7 mt-3 py-2 text-lg font-bold rounded-xl bg-lime-500 text-white">View details</button></Link>
+          <Link to={`/singleSubDetails/${_id}`} toy={toy}> <button className="px-7 mt-3 py-2 text-lg font-bold rounded-xl hover:bg-lime-700 bg-lime-500 text-white">View details</button></Link>
 
         </div>
       </div>

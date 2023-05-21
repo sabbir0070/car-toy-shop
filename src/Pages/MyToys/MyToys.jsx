@@ -11,11 +11,13 @@ const options = [
 ]
 
 const MyToys = () => {
-  const { user } = useContext(AuthContext);
+  const { user} = useContext(AuthContext);
   const [toys, setToys] = useState([]);
   const [control, setControl] = useState(false)
   const [selectedOption, setSelectedOption] = useState(options[0])
  UseTitle('My Toys')
+
+
   useEffect(() => {
     const [value, type] = selectedOption.value
       .split("-")
@@ -63,7 +65,7 @@ const MyToys = () => {
 
   return (
     <div>
-      <h2 className='text-center text-3xl font-semibold text-lime-600 mt-5'>My All Toys</h2>
+      <h2 className='text-center text-4xl font-bold text-gray-600 mt-5'>MY ALL TOYS</h2>
       <div className='text-lg mt-5 font-semibold   mx-auto h-4 w-60'>
         <Select
           defaultValue={options[0]}

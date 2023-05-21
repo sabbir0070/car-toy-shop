@@ -5,7 +5,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const ToySingleSubDetails = () => {
 const toy = useLoaderData();
- const { _id, toyName, sellerName,sellerEmail, rating, quantity, photo, price, subCategory, date, details } = toy;
+ const {toyName, sellerName,sellerEmail, rating, quantity, photo, price, subCategory, date, details } = toy;
 
   return (
     <div className='bg-base-300 rounded-lg'>
@@ -31,7 +31,7 @@ const toy = useLoaderData();
             />
           </p>
         <div className="flex gap-20 items-center">
-      <Link to="/"><button className="px-6 py-2 text-white bg-lime-500 rounded">Back Now</button></Link>
+      <Link to="/"><button className="px-6 py-2 text-white hover:bg-lime-700 bg-lime-500 font-bold rounded">Back Now</button></Link>
     <p className='text-lime-700 text-xl font-bold flex items-center'> <FaCalendar className='text-lime-500 mr-2'></FaCalendar> {date} </p>
 </div>
 <div className='flex gap-3'>

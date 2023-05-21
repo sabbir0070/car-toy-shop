@@ -27,7 +27,7 @@ setToys(data)
 }
   return (
     <div>
-      <h2>All toys user toys</h2>
+      <h2 className='text-center my-3 text-4xl font-bold text-gray-400'>ALL USER TOYS</h2>
 <div className='text-center w-full'>
 <input onChange={(e)=>setSearchText(e.target.value)} className='text-center w-72 bg-base-300 h-12  text-black rounded-lg' placeholder='Search your toy name' type="text"  />
 <button onClick={handleSearch} className='ml-4 px-5 py-3 bg-green-700 text-white rounded-lg'>Search</button>
