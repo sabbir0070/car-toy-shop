@@ -10,7 +10,7 @@ const Footer = () => {
   <footer className="footer  p-10 bg-black text-white">
   <div>
     <img src={logo} className='w-52 h-20' alt="" />
-    <p className='text-3xl text-lime-600 font-bold pt-5'>Car Toys Shop<br/>Providing reliable tech since 1992</p>
+    <p className='text-3xl text-lime-600 font-bold pt-5'>Car Toys Shop<br/>Providing reliable <br /> tech since 1992</p>
   </div> 
   <div>
     <span className=" text-2xl font-bold text-lime-500">SERVICES</span> 
