@@ -5,7 +5,9 @@ import { FaBook, FaCalculator, FaCarAlt, FaFacebook, FaFileContract, FaGoogle, F
 const Footer = () => {
   return (
     <div className='mb-10 bg-black'>
-  <footer className="footer  p-10 bg-black text-base-content text-white">
+<h3 className='font-bold hover:text-white text-5xl text-center pt-5 text-green-200'>Toy</h3>
+<h2 className='font-bold hover:text-white text-5xl text-center pt-5 text-green-200'>High Quality Car Toy Product Available </h2>
+  <footer className="footer  p-10 bg-black text-white">
   <div>
     <img src={logo} className='w-52 h-20' alt="" />
     <p className='text-3xl text-lime-600 font-bold pt-5'>Car Toys Shop<br/>Providing reliable tech since 1992</p>
@@ -26,7 +28,8 @@ const Footer = () => {
     <a className="link link-hover flex gap-3 text-lg font-semibold items-center text-gray-200"> <FaReact className='text-blue-500 w-14 h-8'></FaReact> React developer</a>
 </div>  
   <div className='w-full'>
-<ul className='flex md:flex-col lg:grid-col gap-y-5 sm:gap-x-4 justify-center mx-auto sm:mt-5 '>
+<span className=" text-2xl font-bold text-lime-500">LEGAL</span> 
+<ul className='flex md:flex-col lg:grid-col sm:gap-x-4 justify-center mx-auto sm:mt-5 '>
                 <li className='px-2 w-14 h-10 text-2xl cursor-pointer'>
                <FaFacebook className='w-14 h-10 text-white'></FaFacebook>
                 </li>
@@ -42,14 +45,8 @@ const Footer = () => {
             </ul>
    
   </div> 
-  {/* <div>
-
-    <span className="footer-title">Legal</span> 
-    <a className="link link-hover">Terms of use</a> 
-    <a className="link link-hover">Privacy policy</a> 
-    <a className="link link-hover">Cookie policy</a>
-  </div> */}
 </footer>
+ 
  <div className='px-10 py-1 bg-black mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
                 </div>
                 <div className='pb-10  block text-2xl text-center text-red-400 hover:text-red-500'>
