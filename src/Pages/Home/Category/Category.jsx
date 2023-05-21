@@ -42,7 +42,7 @@ activeTab =="MiniPoliceCar" ? "bg-yellow-500 text-white" :''
 Police
 </div>
 </div>
-<div className='grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 w-full rounded-xl gap-10 my-10 py-5'>
+<div className='grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 rounded-r-xl w-full  rounded-xl gap-10 my-10 py-5'>
 {
 toys.map(toy=><ToySubCard key={toy._id} toy={toy}></ToySubCard> )
 }

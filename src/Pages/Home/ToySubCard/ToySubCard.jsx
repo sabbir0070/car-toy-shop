@@ -17,15 +17,15 @@ const ToySubCard = ({ toy }) => {
   console.log(_id)
   return (
     <div>
-      <div className="card md:card-side lg:card-side w-full h-full bg-base-100  shadow-xl ">
+      <div className="card md:card-side lg:card-side w-full h-full bg-base-100 rounded-r-xl  rounded-xl shadow-xl ">
         <div data-aos="zoom-in-up"
           data-aos-easing="ease-in-out"
           data-aos-anchor-placement="top-center"
 
-          className='md:w-1/2 lg:w-1/2 w-full  h-60 '>
-          <img src={photo} className='w-full  h-full p-5 lg:mt-3 md:mt-3  ' alt="Movie" />
+          className='md:w-1/2 lg:w-1/2 w-full h-60 '>
+          <img src={photo} className='w-full h-full p-5 lg:mt-3 md:mt-3 ' alt="Car" />
         </div>
-        <div className="card-body lg:w-1/2 md:w-1/2 bg-base-200 ">
+        <div className="card-body lg:w-1/2 md:w-1/2 rounded-r-xl bg-base-200 ">
           <h2 className="text-2xl font-bold text-lime-800 ">Name: <span className='text-blue-800 text-xl'>{toyName}</span> </h2>
 
           <p className='text-lime-800 text-xl font-bold'>Price: <span className='text-yellow-600'>$ {price} </span> </p>
@@ -39,7 +39,7 @@ const ToySubCard = ({ toy }) => {
               fullSymbol={<FaStar></FaStar>}
             />
           </p>
-          <Link to={`/singleSubDetails/${_id}`} toy={toy}> <button className="px-7 mt-3 py-2 text-lg font-bold rounded-xl hover:bg-lime-700 bg-lime-500 text-white">View details</button></Link>
+          <Link to={`/singleSubDetails/${_id}`} toy={toy}> <button className="px-7 mt-3 py-3 text-lg font-bold rounded-xl hover:bg-lime-700 bg-lime-500 text-white">View details</button></Link>
 
         </div>
       </div>
