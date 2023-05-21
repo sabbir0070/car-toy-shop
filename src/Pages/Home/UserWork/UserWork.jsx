@@ -2,8 +2,8 @@ import React from 'react';
 
 const UserWork = () => {
     return (
-        <div className='lg:px-10 md:px-10 bg-gray-400 rounded-lg p-5 mb-5 py-10'>
-            <h2 className='text-center text-4xl font-bold text-lime-400 mb-10'>How It's Works?</h2>
+        <div className='lg:px-10 md:px-10 bg-base-300 rounded-lg p-5 mb-5 py-10'>
+            <h2 className='text-center text-4xl font-bold text-lime-500 mb-10'>How It's Works?</h2>
             <div className='grid grid-cols-3 gap-5 text-center'>
                 <div data-aos="fade-down"
                     data-aos-easing="linear"
@@ -13,8 +13,8 @@ const UserWork = () => {
                     </svg>
 
 
-                    <h2 className='text-lime-400  font-bold lg:text-xl'>Create Account</h2>
-                    <p className=' text-white mt-3'>It's very easy to open an account <br /> and start your journey</p>
+                    <h2 className='text-lime-500  font-bold lg:text-xl'>Create Account</h2>
+                    <p className=' text-gray-500 mt-3'>It's very easy to open an account <br /> and start your journey</p>
                 </div>
                 <div data-aos="fade-down"
                     data-aos-easing="linear"
@@ -23,8 +23,8 @@ const UserWork = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
                     </svg>
 
-                    <h2 className='text-lime-400  font-bold lg:text-xl'>Complete Your Account</h2>
-                    <p className=' text-white mt-3'>Complete Your profile with all the info <br />  to get authentication of client.</p>
+                    <h2 className='text-lime-500  font-bold lg:text-xl'>Complete Your Account</h2>
+                    <p className=' text-gray-500 mt-3'>Complete Your profile with all the info <br />  to get authentication of client.</p>
                 </div>
                 <div data-aos="fade-down"
                     data-aos-easing="linear"
@@ -35,8 +35,8 @@ const UserWork = () => {
 
 
 
-                    <h2 className='text-lime-400 font-bold lg:text-xl'>Add Your Business Toys</h2>
-                    <p className=' text-white mt-3'>Add and get your preferable toys with all <br /> the requirements and get it.</p>
+                    <h2 className='text-lime-500 font-bold lg:text-xl'>Add Your Business Toys</h2>
+                    <p className=' text-gray-500 mt-3'>Add and get your preferable toys with all <br /> the requirements and get it.</p>
                 </div>
             </div>
         </div>
