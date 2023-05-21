@@ -17,7 +17,7 @@ const handleTabClick = (tabName) =>{
 setActiveTab(tabName);
 }
   return (
-    <div className='my-8 bg-base-300 px-20'>
+    <div className='my-8 bg-base-300 pb-2 md:px-16 lg:px-16'>
 <h2 className='text-center font-bold text-3xl text-blue-700 py-6'>All Toy Category Product</h2>
 <div className='flex justify-center gap-8'>
 <div onClick={()=>handleTabClick('MiniTruck')} className={`
@@ -42,7 +42,7 @@ activeTab =="MiniPoliceCar" ? "bg-yellow-500 text-white" :''
 Police
 </div>
 </div>
-<div className='grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 rounded-xl gap-10 my-10 py-5'>
+<div className='grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 w-full rounded-xl gap-10 my-10 py-5'>
 {
 toys.map(toy=><ToySubCard key={toy._id} toy={toy}></ToySubCard> )
 }

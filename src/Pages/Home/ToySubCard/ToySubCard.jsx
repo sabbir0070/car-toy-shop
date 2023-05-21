@@ -6,28 +6,26 @@ import { Link } from 'react-router-dom';
 import 'aos/dist/aos.css';
 
 const ToySubCard = ({ toy }) => {
-useEffect(() => {
-  Aos.init({
-    duration: 4000, // Animation duration
-    once: true, // Only animate once
-  });
-}, []);
+  useEffect(() => {
+    Aos.init({
+      duration: 3000, // Animation duration
+      once: false, // Only animate once
+      easing: 'ease-in-out'
+    });
+  }, []);
   const { _id, toyName, sellerName, rating, quantity, photo, price, subCategory, date, details } = toy;
-console.log(_id)  
-return (
+  console.log(_id)
+  return (
     <div>
-      <div className="card md:card-side max-w-screen-sm lg:card-side w-full h-full bg-base-100   shadow-xl ">
-        <div data-aos="zoom-in-up" 
-    data-aos-offset="200"
-    data-aos-delay="50"
-    data-aos-duration="1000"
-    data-aos-easing="ease-in-out"
-    data-aos-anchor-placement="top-center"
+      <div className="card md:card-side lg:card-side w-full h-full bg-base-100  shadow-xl ">
+        <div data-aos="zoom-in-up"
+          data-aos-easing="ease-in-out"
+          data-aos-anchor-placement="top-center"
 
-className='md:w-1/2 lg:w-1/2  h-60 '>
+          className='md:w-1/2 lg:w-1/2 w-full  h-60 '>
           <img src={photo} className='w-full  h-full p-5 lg:mt-3 md:mt-3  ' alt="Movie" />
         </div>
-        <div className="card-body lg:w-1/2 bg-base-200 ">
+        <div className="card-body lg:w-1/2 md:w-1/2 bg-base-200 ">
           <h2 className="text-2xl font-bold text-lime-800 ">Name: <span className='text-blue-800 text-xl'>{toyName}</span> </h2>
 
           <p className='text-lime-800 text-xl font-bold'>Price: <span className='text-yellow-600'>$ {price} </span> </p>
