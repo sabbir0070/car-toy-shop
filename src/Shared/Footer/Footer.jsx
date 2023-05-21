@@ -4,9 +4,9 @@ import { FaBook, FaCalculator, FaCarAlt, FaFacebook, FaFileContract, FaGoogle, F
 
 const Footer = () => {
   return (
-    <div className='mb-10 bg-black'>
-<h3 className='font-bold hover:text-white text-5xl text-center pt-5 text-green-200'>Toy</h3>
-<h2 className='font-bold hover:text-white text-5xl text-center pt-5 text-green-200'>High Quality Car Toy Product Available </h2>
+    <div className='mb-10 bg-black h-66'>
+{/* <h3 className='font-bold hover:text-white text-5xl text-center pt-5 text-green-200'>Toy</h3>
+<h2 className='font-bold hover:text-white text-5xl text-center pt-5 text-green-200'>High Quality Car Toy Product Available </h2> */}
   <footer className="footer  p-10 bg-black text-white">
   <div>
     <img src={logo} className='w-52 h-20' alt="" />
@@ -29,18 +29,18 @@ const Footer = () => {
 </div>  
   <div className='w-full'>
 <span className=" text-2xl font-bold text-lime-500">LEGAL</span> 
-<ul className='flex md:flex-col lg:grid-col sm:gap-x-4 justify-center mx-auto sm:mt-5 '>
-                <li className='px-2 w-14 h-10 text-2xl cursor-pointer'>
-               <FaFacebook className='w-14 h-10 text-white'></FaFacebook>
+<ul className='flex md:flex-col lg:grid-col gap-y-3 sm:gap-x-4 justify-center mx-auto '>
+                <li className='px-2 w-14 h-8 text-2xl cursor-pointer'>
+               <FaFacebook className='w-14 h-8 text-white'></FaFacebook>
                 </li>
-                <li className='px-2 w-14 h-10 text-xl cursor-pointer'>
-                    <FaLinkedinIn className='w-14 h-10 text-green-700'></FaLinkedinIn>
-                </li>
-                <li className='px-2 text-2xl cursor-pointer'>
-                    <FaInstagram className='w-14 h-10 text-red-600'></FaInstagram>
+                <li className='px-2 w-14 h-8 text-xl cursor-pointer'>
+                    <FaLinkedinIn className='w-14 h-8 text-green-700'></FaLinkedinIn>
                 </li>
                 <li className='px-2 text-2xl cursor-pointer'>
-                    <FaTwitter className='w-14 h-10 text-blue-600'></FaTwitter>
+                    <FaInstagram className='w-14 h-8 text-red-600'></FaInstagram>
+                </li>
+                <li className='px-2 text-2xl cursor-pointer'>
+                    <FaTwitter className='w-14 h-8 text-blue-600'></FaTwitter>
                 </li>
             </ul>
    
