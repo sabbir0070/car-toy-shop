@@ -40,7 +40,7 @@ const navItems = <>
 </>
 const navItemSmallDevice = <>
    <div className='flex justify-between'>
- <ul className="menu menu-horizontal flex flex-col px-1 mb-4 text-lg font-bold text-gray-700">
+ <ul className="menu menu-horizontal flex flex-col px-1 mb-4 text-lg font-bold bg-lime-400 text-gray-700">
       <li><Link to="/">Home</Link></li>
       <li><Link to="/allToy">All Toys</Link></li>
       {user &&
@@ -55,7 +55,7 @@ const navItemSmallDevice = <>
 <div aria-label={user} title={user?.displayName}>
 <div className='w-10 h-10 rounded-full ml-3 mb-3 items-center justify-center'> <img src={user?.photoURL} className='w-10 h-10 rounded-full' alt="img nai" /> </div>
 </div>
-<li><button onClick={handleLogOut} className="bg-lime-600 px-6 py-1 text-white" to="/logout">logOut</button></li>
+<li><button onClick={handleLogOut} className="bg-lime-600 px-6 py-2 sm:mb-3 text-white" to="/logout">logOut</button></li>
 </>:
 <><li><Link to="/login">Login</Link></li> </>
 }
@@ -64,7 +64,7 @@ const navItemSmallDevice = <>
 </div>
 </>
   return (
-  <div className="navbar bg-base-300 h-28">
+  <div className="navbar bg-base-300 mt-1 h-28">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -75,7 +75,7 @@ const navItemSmallDevice = <>
       </ul>
     </div>
     <Link to="/" className="btn btn-ghost normal-case text-xl">
-<img src={logo} className='w-40 h-16' alt="nai" />
+<img src={logo} className='w-40 h-14 ' alt="nai" />
 </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -87,7 +87,7 @@ const navItemSmallDevice = <>
     </ul>
   </div>
   <div className="navbar-end">
- <Link to='/signUp'><button className="btn btn-outline btn-warning">Register</button></Link>
+ <Link to='/signUp'><button className="px-5 py-3 bg-lime-600 rounded-lg text-white font-bold">Register</button></Link>
   </div>
 </div>
   );
